@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Search</title>
+    </head>
+    <body>
+        <form action="https://nhentai.net/g/q/">
+            <input type="text" name="q" id="searchInput">
+            <input type="submit" value="nhentai Search" onclick="updateActionURL()">
+        </form>
+
+        <script>
+            function updateActionURL() {
+                var searchInput = document.getElementById('searchInput').value;
+                var form = document.querySelector('form');
+                form.action = "https://nhentai.net/g/" + searchInput +"/";
+            }
+        </script>
+    </body>
+</html>
+
